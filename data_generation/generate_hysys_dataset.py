@@ -3,9 +3,12 @@ import pandas as pd
 import pythoncom
 import win32com.client as win32
 from win32com.client import VARIANT
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 #User-Defined
-hyFilePath   = r"D:\Neural\Project\Hysys sim_Datagenration\Simulation_Columns_Copy.hsc"
+hyFilePath = str(PROJECT_ROOT / "hysys" / "Simulation_Columns_Copy.hsc")
 data_num     = 5000
 rng_seed     = 39                  
 alpha_totals = 0.6                  
